@@ -8,7 +8,7 @@ import java.util.ArrayDeque;
 public class Main {
     public static void main(String[] args) {
         //task3
-        System.out.print("Задание 1");
+        System.out.println("Задание 1");
         int[] array_for = {34, 11, 55, 44};
         int sum = 0;
         for (int i = 0; i < 4; i++) {
