@@ -11,5 +11,6 @@ public class Main {
         rectangle.setCoords(15,210);
         rectangle.move(550,10);
         rectangle.allInfo();
+
     }
 }
