@@ -1,11 +1,7 @@
 package Laba7;
 
+import java.util.ArrayList;
+
 public class Person {
-    private FurnitureShop basket[] = new FurnitureShop[1];
-
-
-    public void getInfoAboutPrices() {
-        System.out.println(basket[0].newPriceOfCupboard());
-        System.out.println(basket[1].newPriceOfChair());
-    }
+    ArrayList<Furniture> basket = new ArrayList<>();
 }

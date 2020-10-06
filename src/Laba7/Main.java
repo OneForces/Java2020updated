@@ -13,6 +13,6 @@ public class Main {
         furn.newCupboard(true,"yellow", 44,22,true,true);
         System.out.println(furn); // добавленная мебель
         Person pers = new Person();
-        pers.getInfoAboutPrices();
+        System.out.println("Покупка= " + pers.basket);
     }
 }
