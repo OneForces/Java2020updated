@@ -1,40 +1,26 @@
 package Laba13;
 
-import java.util.Arrays;
 
 public class Student {
-    private int ID;
-    private int[] marks;
-    Student(int id,int ...marks){
-        this.ID=id;
-        this.marks=marks;
+    private String name;
+    private int id;
+    private int factor;
+
+    public Student(String name, int id, int factor) {
+        this.name = name;
+        this.id = id;
+        this.factor = factor;
     }
 
-    public int getID() {
-        return ID;
+    public String getName() {
+        return name;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public int getId() {
+        return id;
     }
 
-    public int[] getMarks() {
-        return marks;
-    }
-
-    public void setMarks(int[] marks) {
-        this.marks = marks;
-    }
-    public String printMark(){
-        String a="";
-        double sum = 0;
-        for (int i = 0; i < this.getMarks().length; ++i) {
-            sum += this.getMarks()[i];
-        }
-        return ""+sum / this.getMarks().length;
-    }
-    @Override
-    public String toString() {
-        return "ID: "+ID+", Marks: "+printMark();
+    public int getFactor() {
+        return factor;
     }
 }
