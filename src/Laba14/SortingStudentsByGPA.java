@@ -35,6 +35,29 @@ public class SortingStudentsByGPA implements Comparator<Student> {
                 quickSort(students, i, high);
         }
     }
+
+    public void equals() {
+        while (i <= j) {
+            while (Mid(array[i]) > Mid(opora)) {
+                i++;
+            }
+            while (Mid(array[j]) < Mid(opora)) {
+                j--;
+            }
+            if (i <= j) {
+                Laba13.Student temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                i++;
+                j--;
+            }
+        }
+        if (low < j)
+            quickSort(array, low, j);
+        if (high > i)
+            quickSort(array, i, high);
+    }
+
     public SortingStudentsByGPA(ArrayList<Student> students) {
         this.students = students;
         int low = 0, high = students.size() - 1;
