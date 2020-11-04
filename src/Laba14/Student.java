@@ -1,26 +1,43 @@
 package Laba14;
 
+import java.util.Comparator;
 
 public class Student {
-    private String name;
-    private int id;
-    private int factor;
-
-    public Student(String name, int id, int factor) {
-        this.name = name;
-        this.id = id;
-        this.factor = factor;
+    private int IDNumber;
+    private int[] marks;
+    Student(int id,int[] x){
+        this.IDNumber=id;
+        marks=x;
     }
 
-    public String getName() {
-        return name;
+    public int getID() {
+        return IDNumber;
     }
 
-    public int getId() {
-        return id;
+    public void setID(int ID) {
+        this.IDNumber = ID;
     }
 
-    public int getFactor() {
-        return factor;
+    public int[] getMarks() {
+        return marks;
     }
+
+    public void setMarks(int[] marks) {
+        this.marks = marks;
+    }
+    public String printMark(){
+        String a="";
+        int sum=0;
+        for(int i:marks){
+            a+=i+", ";
+            sum+=i;
+        }
+        a+="Среднее значение: "+sum/ marks.length+"";
+        return a;
+    }
+    @Override
+    public String toString() {
+        return "ID: "+IDNumber+", Marks: "+printMark();
+    }
+
 }
